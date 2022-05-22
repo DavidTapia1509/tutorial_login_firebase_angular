@@ -1,0 +1,38 @@
+.card{
+    background-color: rgba(52, 95, 63, 0.4);
+}
+
+label {
+    
+    text-align: right;
+    clear: both;
+    float:left;
+    
+}
+
+.carousel{
+    width: 100%;
+    
+   margin-top: 20px;
+}
+.carousel-inner{
+      width: 100%;
+
+}
+.carousel-item .img-fluid {
+    width:100%;
+  
+
+}
+form{
+    background: rgba(106, 168, 122, 0.4);
+    color:rgb(16, 16, 197);
+
+}
+
+.container{
+   margin-top: 25px;
+    }
+.alert{
+    margin-top: 45px;
+}

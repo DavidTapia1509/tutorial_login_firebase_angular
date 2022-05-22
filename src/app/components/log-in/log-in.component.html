@@ -1,15 +1,77 @@
-<form #formLogIn="ngForm">
-        <label>Email</label>
-        <input type="email" name="cajamail" #cajamail placeholder="example@example.com" class="form-control">
-        <br/>
-        <label>Contraseña</label>
-        <input type="password" name="cajapassword" #cajapassword placeholder="123456" class="form-control" minlength="6" maxlength="20" pattern="[A-Za-z0-9]{6,20}">
-        <br/>
-        <button class="btn btn-success" (click)="logIn()">
-            Log In
-        </button>
-        &nbsp;
-        <button class="btn btn-danger" (click)="logInGoogle()">
-            Log In con Google
-        </button>
-</form>
+<div class=" card">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+     <div class="carousel-indicators">
+       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     </div>
+        
+
+<div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src="assets/images/portada1.jpg"  class="d-block  w-100" alt="">
+    </div>
+    <div class="carousel-item">
+     <img src="assets/images/portada2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/portada3.jpg" class="d-block w-100" alt="...">
+     </div>
+  </div>
+ 
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Previous</span>
+  </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+  </button>
+  
+  
+        <div class=" card-img-overlay bg-transparent  ">
+          <div class="container">
+            <div class=" row justify-content-end">
+            <div class="col-sm-4">
+             <div class="card text-black bg-transparent border-3 border-success ">
+                <div class="card-body ">
+                  <form #formLogIn="ngForm"  >
+                      <div class="logo text-center">
+                        <h2>LOGIN</h2>
+                        <img src="assets/images/logo.jpg" with="100" height="100px" class="rounded-circle">
+                       </div>  
+                   
+                       <div class="form-group">
+                        <label><strong>Email</strong></label>
+                        <input type="email" [(ngModel)]= "email"name="cajamail" #cajamail placeholder="example@example.com" class="form-control">
+                        <span *ngIf="!email" class="text-danger">
+                            El email es obligatorio!!
+                           </span>
+                      </div>
+                        <br/>
+                        <label><strong>Contraseña</strong></label>
+                        <input type="password" [(ngModel)]= "password" name="cajapassword" #cajapassword placeholder="123456" class="form-control" minlength="6" maxlength="20" pattern="[A-Za-z0-9]{6,20}">
+                        
+                        <span *ngIf="!password"class="text-danger">
+                            La contraseña es obligatoria!!
+                              </span>
+                              <br/>
+                        <button class="btn btn-success d-grid gap-2 col-6 mx-auto" (click)="logIn()">
+                            Log In
+                        </button>
+                        <br/>
+                     </form>
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+</div>  
+                             
+                        
+                       
+                    
+            
+         
+       
+

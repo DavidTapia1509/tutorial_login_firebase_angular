@@ -11,7 +11,8 @@ export class LogInComponent implements OnInit {
 
   @ViewChild("cajamail") cajamail! : ElementRef;
   @ViewChild("cajapassword") cajapassword! : ElementRef;
-
+  email!: string;
+  password!: string;
   constructor(private _auth : ServiceAuth, private _router: Router) { }
 
   ngOnInit(): void {
@@ -23,15 +24,10 @@ export class LogInComponent implements OnInit {
     this._auth.login(mail, contra).then(res=> {
       console.log(res);
       this._router.navigate(['perfil']);
+      console.log(this.email);
+      console.log(this.password);
     });
   }
 
-  logInGoogle():void{
-    var mail = this.cajamail.nativeElement.value;
-    var contra = this.cajapassword.nativeElement.value;
-    this._auth.loginGoogle(mail, contra).then(res=>{
-      console.log(res);
-      this._router.navigate(['perfil']);
-    });
-  }
+  
 }

@@ -8,14 +8,16 @@ import { ServiceAuth } from 'src/app/services/auth.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
+  public title: string;
   public logueado : boolean;
   public usuario : any;
   constructor(private _service : ServiceAuth, private _router : Router) {
     this.logueado = false;
+     this.title = "Bienvenid@ a AviFly";
   }
 
   ngOnInit(): void {
+   
   this.usuarioLogueado();
   }
 

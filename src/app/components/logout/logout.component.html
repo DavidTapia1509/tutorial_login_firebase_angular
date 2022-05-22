@@ -1,11 +1,14 @@
-<label>
-    <h1>¿Está seguro/a de que quiere hacer Log Out?</h1>
-    <br/>
-    <button class="btn btn-danger" (click)="logOut()"> 
-        Log Out
+<div class=" container-fluid row row-cols-1 row-cols-md-1 g-1">
+<div class="card " style="width: 15rem;">
+    <div class="card-body">
+      <h3 class="card-title">Está segur@ de que quiere salir de nuestra red?</h3>
+      <button class="btn btn-danger" (click)="logOut()"> 
+        Salir
     </button>
     &nbsp;
     <a class="btn btn-success" [routerLink]="['/perfil']"> 
         Volver
     </a>
-</label>
+    </div>
+    </div>
+  </div>

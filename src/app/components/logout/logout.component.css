@@ -1,0 +1,7 @@
+.container-fluid{
+padding-top: 350px;
+margin-left: auto;
+}
+.card:hover {
+	box-shadow: inset 9999px 9999px rgba(0,0,0,0.20);
+}

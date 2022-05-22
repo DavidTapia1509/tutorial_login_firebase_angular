@@ -17,6 +17,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { EditarComponent } from './components/editar/editar.component';
+import { BodyComponent } from './components/body/body.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EditarComponent } from './components/editar/editar.component';
     RegistroComponent,
     PerfilComponent,
     LogoutComponent,
-    EditarComponent
+    EditarComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

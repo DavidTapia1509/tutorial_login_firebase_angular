@@ -8,7 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
-
+  name!:string;
+  surname!: string;
+  nick!: string;
+  email!: string;
+  password!: string;
   @ViewChild("cajamail") cajamail! : ElementRef;
   @ViewChild("cajapassword") cajapassword! : ElementRef;
 
@@ -23,6 +27,12 @@ export class RegistroComponent implements OnInit {
     this._auth.registro(mail, contra).then(res=>{
       console.log(res);
       this._router.navigate(['perfil']);
+      console.log(this.name);
+      console.log(this.surname);
+      console.log(this.nick);
+      
+      console.log(this.email);
+      console.log(this.password);
     });
   }
 
